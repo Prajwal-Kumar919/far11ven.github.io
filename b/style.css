@@ -1,0 +1,30 @@
+.post {
+  word-break: break-word;
+  overflow: auto;
+}
+
+.post-image {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  max-height: 26rem;
+}
+
+.post-date {
+  margin-bottom: 2rem;
+}
+
+.post p {
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+pre {
+  background-color: #dae3ec;
+}
+
+#disqus_thread {
+  margin: auto;
+  width: 100%;
+}
