@@ -178,6 +178,15 @@ a.back-to-home:hover {
   border: 0.1rem solid #007bff;
 }
 
+.dev_to_icon{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  top: 0;
+  margin-bottom: 9px;
+  fill: currentColor;
+}
+
 /** animations **/
 
 .animate-float {
