@@ -1,0 +1,18 @@
+{
+  "development-home": {
+    "apiUrl": "http://localhost:2368",
+    "contentApiKey": "f0fe4675750b7aaeb247bf0def"
+  },
+  "development-ofc": {
+    "apiUrl": "http://localhost:2368",
+    "contentApiKey": "cf66aeabe344cd370dfce65545"
+  },
+  "development": {
+    "apiUrl": "https://kushal.digitalpress.blog",
+    "contentApiKey": "66378888e41585778ea70b1ee4"
+  },
+  "production": {
+    "apiUrl": "https://kushal.digitalpress.blog",
+    "contentApiKey": "66378888e41585778ea70b1ee4"
+  }
+}

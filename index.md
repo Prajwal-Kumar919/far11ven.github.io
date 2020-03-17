@@ -1,2 +1,0 @@
-# kushalbhalaik.xyz
-kushalbhalaik.xyz

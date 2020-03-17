@@ -1,4 +1,0 @@
-ErrorDocument 404 /404.html
-Options All -Indexes
-DefaultType text/html
-ErrorDocument 403 /
