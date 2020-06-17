@@ -1,10 +1,6 @@
-img[alt="www.000webhost.com"] {
-  display: none;
-}
-
-body,
-html {
-  background-color: #fcfcfc !important;
+html,
+body {
+  background-color: #fcfcfc;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +20,7 @@ html {
 }
 
 nav {
-  background-color: #fcfcfc !important;
+  background-color: #fcfcfc;
 }
 ul {
   list-style-type: none;

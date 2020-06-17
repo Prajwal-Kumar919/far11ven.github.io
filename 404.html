@@ -10,6 +10,7 @@
    <script src="./pace.js"></script>
    <link rel="icon" type="image/x-icon" href="favicon.ico">
    <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./togglestyle.css">
    <link rel="stylesheet" href="./pace.css">
    <meta name="keywords" content="kushal, bhalaik, kushal bhalaik">
    <meta name="description" content="Not Found - kushalbhalaik.xyz">
@@ -46,6 +47,15 @@
                <a class="nav-link dark-th" href="/contact.html"> contact me </a>
             </li>
          </ul>
+         <span class="navbar-text">
+            <div id="theme" class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
+               <div>Dark Mode</div>
+               <label class="switch">
+                  <input id="theme-toggle" type="checkbox" unchecked="">
+                  <span class="slider round" onclick="themeSelection()"></span>
+               </label>
+            </div>
+         </span>
       </div>
    </nav>
    <div class="main-container jumbotron bg-transparent text-center">

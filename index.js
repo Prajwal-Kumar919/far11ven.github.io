@@ -6,20 +6,19 @@ let isFormValidated = false;
 
 msgData["sender"] = "kushalbhalaik.xyz";
 
-window.onload = function() {
-  console.log("loc ;", window.location.pathname);
+window.onload = function () {
+  changeTheme(localStorage.getItem("darkMode")); //select theme
 
   if (window.location.pathname === "/") {
     fetch("config.json")
-      .then(response => response.json())
+      .then((response) => response.json())
 
-      .then(responseJSON => {
+      .then((responseJSON) => {
         config = responseJSON;
       });
   } else {
     $('a[href="' + window.location.pathname + '"]')
       .parents("li") //variations ("li,ul")
-
       .addClass("active-nav-item");
   }
 
@@ -57,12 +56,12 @@ function sendMsg() {
     body: JSON.stringify(requestBody),
 
     headers: {
-      "Content-Type": "application/json"
-    }
+      "Content-Type": "application/json",
+    },
   })
-    .then(response => response.json())
+    .then((response) => response.json())
 
-    .then(responseJson => {
+    .then((responseJson) => {
       if (responseJson.message === "message was sent") {
         var formParent = document.getElementById("msg-container");
 
@@ -90,7 +89,7 @@ function sendMsg() {
       }
     })
 
-    .catch(err => {
+    .catch((err) => {
       console.log("err", err.message);
     })
 
@@ -99,4 +98,43 @@ function sendMsg() {
     });
 
   $("a[title~='Host']").hide();
+}
+
+function themeSelection() {
+  let isSelected = document.getElementById("theme-toggle").checked;
+
+  localStorage.setItem("darkMode", !isSelected);
+  changeTheme(localStorage.getItem("darkMode"));
+}
+
+function changeTheme(userPref) {
+  var deviceWidth = Math.max(window.screen.width, window.innerWidth);
+  console.log("deviceWidth :", deviceWidth);
+  $(document).ready(function () {
+    if (userPref === "true") {
+      $(".dark-th").css("color", "#ffffff");
+      $("#theme-toggle").prop("checked", true);
+      if (deviceWidth < 575) {
+        $("body").css("background-color", "#12253c");
+        $("html").css("background-color", "#12253c");
+        $("nav").css("background-color", "#12253c");
+      } else {
+        $("body").css("background-color", "#12253c");
+        $("html").css("background-color", "#12253c");
+        $("nav").css("background-color", "#12253c");
+      }
+    } else {
+      $(".dark-th").css("color", "rgba(0,0,0,.5)");
+      $("#theme-toggle").prop("checked", false);
+      if (deviceWidth < 575) {
+        $("body").css("background-color", "#ecf0f3");
+        $("html").css("background-color", "#ecf0f3");
+        $("nav").css("background-color", "#ecf0f3");
+      } else {
+        $("body").css("background-color", "#ecf0f3");
+        $("html").css("background-color", "#ecf0f3");
+        $("nav").css("background-color", "#ecf0f3");
+      }
+    }
+  });
 }

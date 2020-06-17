@@ -10,6 +10,7 @@
   <script src="pace.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="togglestyle.css">
   <link rel="stylesheet" href="pace.css">
   <meta name="keywords" content="kushal, bhalaik, kushal bhalaik">
   <meta name="description" content="My Work - kushalbhalaik.xyz">
@@ -25,7 +26,8 @@
   <meta property="og:image" content="/assets/logo.png">
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top"> <a class="navbar-brand" href="/">kushalbhalaik.xyz</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top"> <a class="navbar-brand dark-th"
+      href="/">kushalbhalaik.xyz</a>
     <button class="navbar-toggler collapsed position-relative" type="button" data-toggle="collapse"
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -39,6 +41,15 @@
         <li class="nav-item header"> <a class="nav-link dark-th" href="/my-work.html"> my work </a> </li>
         <li class="nav-item header"> <a class="nav-link dark-th" href="/contact.html"> contact me </a> </li>
       </ul>
+      <span class="navbar-text">
+        <div id="theme" class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
+          <div>Dark Mode</div>
+          <label class="switch">
+            <input id="theme-toggle" type="checkbox" unchecked="">
+            <span class="slider round" onclick="themeSelection()"></span>
+          </label>
+        </div>
+      </span>
     </div>
   </nav>
   <div class="main-container container-fluid">
