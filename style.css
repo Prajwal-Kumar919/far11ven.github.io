@@ -76,6 +76,12 @@ li a {
   padding: 2rem;
 }
 
+p#success-message {
+  border: 1px solid #007bff;
+  padding: 5rem;
+  margin-top: 1rem;
+}
+
 .bio {
   padding: 28px;
 }

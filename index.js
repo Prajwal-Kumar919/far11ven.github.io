@@ -21,8 +21,6 @@ window.onload = function () {
       .parents("li") //variations ("li,ul")
       .addClass("active-nav-item");
   }
-
-  $("a[title~='Host']").hide();
 };
 
 function handleFormInput(e) {
@@ -44,8 +42,6 @@ function isvalidated(event) {
 }
 
 function sendMsg() {
-  $("a[title~='Host']").hide();
-
   $("#spinner").show();
 
   let requestBody = msgData;
@@ -71,7 +67,7 @@ function sendMsg() {
 
         newElement.setAttribute("id", "success-message");
 
-        newElement.innerHTML = `<h4> Thank you! <br> Your message has been sent. <i style='color:limegreen' class='far fa-check-circle'></i></h4><br>
+        newElement.innerHTML = `<h4 class="dark-th"> Thank you! <br> Your message has been sent. <i style='color:limegreen' class='far fa-check-circle'></i></h4><br>
 
           <a
 
