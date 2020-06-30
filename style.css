@@ -163,6 +163,10 @@ li.header:not(.active-nav-item):hover:after {
   left: 0;
 }
 
+div#theme {
+    font-size: x-small !important;
+}
+
 a.back-to-home {
   color: #007bff;
   margin-top: 1rem;
