@@ -52,7 +52,7 @@ customElements.define(
             this.srcdoc = data.replace(
               /<head([^>]*)>/i,
               `<head$1>
-	<base href="${url}">
+	<base href="/en/forecast/daily-table/2-10135287/India/Himachal Pradesh/Shimla/Bhutti">
 	<script>
 	// X-Frame-Bypass navigation event handlers
 	document.addEventListener('click', e => {
@@ -79,7 +79,11 @@ customElements.define(
         });
     }
     fetchProxy(url, options, i) {
-      const proxy = ["https://jsonp.afeld.me/?url="];
+      const proxy = [
+        "https://cors.io/?",
+        "https://jsonp.afeld.me/?url=",
+        "https://cors-anywhere.herokuapp.com/",
+      ];
       return fetch(proxy[i] + url, options)
         .then((res) => {
           if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
