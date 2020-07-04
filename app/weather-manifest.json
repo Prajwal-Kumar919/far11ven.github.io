@@ -1,7 +1,7 @@
 {
   "name": "Weather app - kushalbhalaik.xyz",
   "short_name": "Weather app - kushalbhalaik.xyz",
-  "start_url": "/weather.html",
+  "start_url": "/app/weather.html",
   "background_color": "#fcfcfc",
   "theme_color": "#f39943",
   "display": "fullscreen",
