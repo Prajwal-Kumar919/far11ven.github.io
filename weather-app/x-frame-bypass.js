@@ -73,14 +73,13 @@ customElements.define(
 	</script>`
             );
         })
-        .catch((e) => console.error("Cannot load X-Frame-Bypass:", e));
+        .catch((e) => {
+          alert("Cannot load X-Frame-Bypass");
+          console.error("Cannot load X-Frame-Bypass:", e);
+        });
     }
     fetchProxy(url, options, i) {
-      const proxy = [
-        "https://cors.io/?",
-        "https://jsonp.afeld.me/?url=",
-        "https://cors-anywhere.herokuapp.com/",
-      ];
+      const proxy = ["https://jsonp.afeld.me/?url="];
       return fetch(proxy[i] + url, options)
         .then((res) => {
           if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
