@@ -52,7 +52,7 @@ customElements.define(
             this.srcdoc = data.replace(
               /<head([^>]*)>/i,
               `<head$1>
-	<base href="/en/forecast/daily-table/2-10135287/India/Himachal Pradesh/Shimla/Bhutti">
+	<base href="/en/forecast/daily-table/2-10135287/India/Himachal%20Pradesh/Shimla/Bhutti">
 	<script>
 	// X-Frame-Bypass navigation event handlers
 	document.addEventListener('click', e => {
