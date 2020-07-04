@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Weather forecast from yr.no</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="index.js"></script>
+   <script src="pace.js"></script>
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="togglestyle.css">
+   <link rel="stylesheet" href="pace.css">
+   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <meta name="keywords"
+      content="bhutti weather, yr.no weather, weather forecast, bhutti himachal pradesh weather, kotgarh, kotharg weather, kotgarh weather forecast,thanedhaar, thanedhaar weather foreacast, thanedhaar, kholighat weather forecast, narkanda, narkanda weather forecast, himachal pradesh weather forecast,kushal, bhalaik, kushal bhalaik instagram">
+   <meta name="description" content="kushalbhalaik on 8link - kushalbhalaik.xyz">
+   <meta property="og:url" content="http://www.kushalbhalaik.xyz">
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Kushal Bhalaik">
+   <meta property="og:description" content="Weather forecast from yr.no - kushalbhalaik.xyz">
+   <meta property="og:image" content="/assets/logo.png">
+   <script src="https://kit.fontawesome.com/02130b3d51.js" crossorigin="anonymous"></script>
+
+   <link rel="manifest" href="weather-manifest.json" />
+   <!-- ios support -->
+   <link rel="apple-touch-icon" href="assets/icons/icon-72x72.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-96x96.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-128x128.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-144x144.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-384x384.png" />
+   <link rel="apple-touch-icon" href="assets/icons/icon-512x512.png" />
+   <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+   <meta name="theme-color" content="#db4938" />
+
+   <script data-ad-client="ca-pub-1533259080190708" async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <script>
+
+      (adsbygoogle = window.adsbygoogle || []).push({
+
+         google_ad_client: "ca-pub-1533259080190708",
+
+         enable_page_level_ads: true
+
+      });
+
+   </script>
+   <script>
+      // Registering our Service worker
+      if ("serviceWorker" in navigator) {
+
+         navigator.serviceWorker
+            .register('serviceWorker.js', { scope: './' })
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+
+      }
+   </script>
+   <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+   <script type="module" src="x-frame-bypass.js"></script>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand dark-th" href="/">kushalbhalaik.xyz</a>
+      <button class="navbar-toggler collapsed position-relative" type="button" data-toggle="collapse"
+         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+         aria-label="Toggle navigation">
+         <span> </span>
+         <span> </span>
+         <span> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item header">
+               <a class="nav-link dark-th" href="/my-work.html"> my work </a>
+            </li>
+            <li class="nav-item header">
+               <a class="nav-link dark-th" href="/contact.html"> contact me </a>
+            </li>
+         </ul>
+         <span class="navbar-text">
+            <div id="theme" class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
+               <div>Dark Mode</div>
+               <label class="switch">
+                  <input id="theme-toggle" type="checkbox" unchecked="">
+                  <span class="slider round" onclick="themeSelection()"></span>
+               </label>
+            </div>
+         </span>
+      </div>
+      </div>
+   </nav>
+   <div class="main-container">
+      <div class="container-fluid">
+         <div class="row no-gutters">
+
+            <iframe is="x-frame-bypass"
+               src="https://www.yr.no/en/forecast/daily-table/2-10135287/India/Himachal%20Pradesh/Shimla/Bhutti"
+               style="width:100%; height:800px; border:none; margin-top:34px; padding:0; overflow:hidden; z-index:999999;"></iframe>
+
+         </div>
+      </div>
+   </div>
+   <footer class="footer mt-auto p-3">
+      <span class="text-muted">© 2019-20 Kushal Bhalaik</span>
+   </footer>
+   <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=406944066536664&autoLogAppEvents=1"
+      async defer crossorigin="anonymous"> </script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
