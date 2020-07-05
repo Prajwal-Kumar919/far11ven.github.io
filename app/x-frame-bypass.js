@@ -16,7 +16,15 @@ customElements.define(
         throw new Error(
           `X-Frame-Bypass src ${url} does not start with http(s)://`
         );
+
+      if (url.includes("http://127.0.0.1:5500")) {
+        url = url.replace("http://127.0.0.1:5500", "https://yr.no");
+      } else if (url.includes("kushalbhalaik.xyz")) {
+        url = url.replace("kushalbhalaik.xyz", "yr.no");
+      }
+
       console.log("X-Frame-Bypass loading:", url);
+
       this.srcdoc = `<html>
 <head>
 	<style>
@@ -48,11 +56,26 @@ customElements.define(
       this.fetchProxy(url, options, 0)
         .then((res) => res.text())
         .then((data) => {
+          let replacedURL = "";
           if (data)
-            this.srcdoc = data.replace(
-              /<head([^>]*)>/i,
-              `<head$1>
-	<base href="/en/forecast/daily-table/2-10135287/India/Himachal%20Pradesh/Shimla/Bhutti">
+            if (url.includes("forecast")) {
+              if (url.includes("daily-table")) {
+                replacedURL =
+                  "/en/forecast/daily-table/2-10135287/India/Himachal%20Pradesh/Shimla/Bhutti";
+              } else {
+                replacedURL =
+                  "/en/forecast/graph/2-10135287/India/Himachal%20Pradesh/Shimla/Bhutti";
+              }
+            } else if (url.includes("map")) {
+              replacedURL =
+                "/en/map/weather/2-10135287/India/Himachal%20Pradesh/Shimla/Bhutti";
+            }
+
+          console.log("URL IS", url);
+          this.srcdoc = data.replace(
+            /<head([^>]*)>/i,
+            `<head$1>
+	<base href="${replacedURL}">
 	<script>
 	// X-Frame-Bypass navigation event handlers
 	document.addEventListener('click', e => {
@@ -71,7 +94,7 @@ customElements.define(
 		}
 	})
 	</script>`
-            );
+          );
         })
         .catch((e) => {
           alert("Cannot load X-Frame-Bypass");
