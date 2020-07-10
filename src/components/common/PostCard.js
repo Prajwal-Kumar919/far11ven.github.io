@@ -9,6 +9,7 @@ const PostCard = ({ post }) => {
 
     return (
         <div>
+            {/* {<div>{console.log(post)}</div>} */}
             <strong className="d-inline-block mb-2 text-primary">
                 {post.tags && (
                     <div className="post-card-tags">
@@ -37,15 +38,19 @@ const PostCard = ({ post }) => {
                 <div className="col p-4 d-flex flex-column position-static">
                     <h3 className="mb-1">{post.title}</h3>
                     <div className="post-card-footer-right">
-                        <div className="mb-2 text-muted">{readingTime}</div>
+                        <div className="mb-2 text-muted">
+                            {"Published on "}
+                            {post.published_at_pretty}{" "}
+                            <p className="lead">
+                                <span className="badge badge-secondary">
+                                    {readingTime}
+                                </span>
+                            </p>
+                        </div>
                     </div>
-                    <div className="mb-1 text-muted">
-                        {/* The main post date
-                            <time className="post-date text-muted">
-                                {post.created_at_pretty}
-                            </time> */}
-                    </div>
+
                     <p className="card-text mb-auto">{post.excerpt}...</p>
+
                     <a href={url} className="stretched-link">
                         Read
                     </a>
@@ -59,7 +64,7 @@ const PostCard = ({ post }) => {
                             width="200"
                             height="250"
                             src={post.feature_image}
-                            alt="Bootstrap Icons - Overview"
+                            alt={post.slug}
                         />
                     )}
                 </div>

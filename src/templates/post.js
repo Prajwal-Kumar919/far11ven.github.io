@@ -50,16 +50,12 @@ const Post = ({ title, data, location }) => {
                                 {post.created_at_pretty}
                             </p>
                             {/* Google in Articale ada */}
-                            <script
-                                async
-                                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                            ></script>
                             <ins
                                 className="adsbygoogle"
-                                style={{
-                                    display: "block",
-                                    textAlign: "center",
-                                }}
+                                // style={{
+                                //     display: "block",
+                                //     textAlign: "center",
+                                // }}
                                 data-ad-layout="in-article"
                                 data-ad-format="fluid"
                                 data-ad-client="ca-pub-1533259080190708"

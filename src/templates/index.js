@@ -21,7 +21,6 @@ const Index = ({ data, location, pageContext }) => {
             <MetaData location={location} />
             <Layout isHome={true}>
                 <div className="container">
-                    <p className="lead">Recent posts..</p>
                     <section className="post-feed">
                         {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
@@ -37,12 +36,12 @@ const Index = ({ data, location, pageContext }) => {
 
 Index.propTypes = {
     data: PropTypes.shape({
-        allGhostPost: PropTypes.object.isRequired
+        allGhostPost: PropTypes.object.isRequired,
     }).isRequired,
     location: PropTypes.shape({
-        pathname: PropTypes.string.isRequired
+        pathname: PropTypes.string.isRequired,
     }).isRequired,
-    pageContext: PropTypes.object
+    pageContext: PropTypes.object,
 };
 
 export default Index;
