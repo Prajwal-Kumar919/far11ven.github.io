@@ -31,6 +31,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     type="image/x-icon"
                     href={Favicon}
                 ></link>
+                {/* Google ad code */}
+                <script
+                    data-ad-client="ca-pub-1533259080190708"
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                ></script>
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
             </Helmet>
@@ -143,11 +149,11 @@ DefaultLayout.propTypes = {
     bodyClass: PropTypes.string,
     isHome: PropTypes.bool,
     data: PropTypes.shape({
-        allGhostSettings: PropTypes.object.isRequired
-    }).isRequired
+        allGhostSettings: PropTypes.object.isRequired,
+    }).isRequired,
 };
 
-const DefaultLayoutSettingsQuery = props => (
+const DefaultLayoutSettingsQuery = (props) => (
     <StaticQuery
         query={graphql`
             query GhostSettings {
@@ -167,7 +173,7 @@ const DefaultLayoutSettingsQuery = props => (
                 }
             }
         `}
-        render={data => <DefaultLayout data={data} {...props} />}
+        render={(data) => <DefaultLayout data={data} {...props} />}
     />
 );
 

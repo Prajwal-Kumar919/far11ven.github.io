@@ -18,7 +18,7 @@ const Post = ({ title, data, location }) => {
     const post = data.ghostPost;
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME || "www-kushalbhalaik-xyz",
-        config: { identifier: post.slug, title }
+        config: { identifier: post.slug, title },
     };
 
     return (
@@ -49,6 +49,26 @@ const Post = ({ title, data, location }) => {
                             <p className="text-muted">
                                 {post.created_at_pretty}
                             </p>
+                            {/* Google in Articale ada */}
+                            <script
+                                async
+                                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                            ></script>
+                            <ins
+                                className="adsbygoogle"
+                                style={{
+                                    display: "block",
+                                    textAlign: "center",
+                                }}
+                                data-ad-layout="in-article"
+                                data-ad-format="fluid"
+                                data-ad-client="ca-pub-1533259080190708"
+                                data-ad-slot="8244664482"
+                            ></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({}
+                                );
+                            </script>
                             <section
                                 className="content-body load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -70,10 +90,10 @@ Post.propTypes = {
         ghostPost: PropTypes.shape({
             title: PropTypes.string.isRequired,
             html: PropTypes.string.isRequired,
-            feature_image: PropTypes.string
-        }).isRequired
+            feature_image: PropTypes.string,
+        }).isRequired,
     }).isRequired,
-    location: PropTypes.object.isRequired
+    location: PropTypes.object.isRequired,
 };
 
 export default Post;
