@@ -991,7 +991,9 @@ h6 {
 }
 
 .pagination a:hover {
-    color: #007bff;
+    color: #fff; 
+    background-color: #6c757d; 
+    border-color: #6c757d;
 }
 
 .pagination-location {
