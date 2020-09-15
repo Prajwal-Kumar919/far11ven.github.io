@@ -179,6 +179,11 @@ a.back-to-home:hover {
   color: royalblue;
 }
 
+.social-link:hover {
+  transform: scale(1);
+  animation: heart-beat 1s ease-in-out infinite alternate;
+}
+
 /** Navbar Toggler Icon **/
 .navbar-toggler:focus,
 .navbar-toggler:hover {
